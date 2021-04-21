@@ -1,13 +1,13 @@
 public class SEOOptimizer {
-    public void addWebsiteToDatabase(Website){
+    public void addWebsiteToDatabase(Website site){
 
     }
 
-    public JSON returnSEOStatistics(Website){
+    public JSON returnSEOStatistics(Website site){
 
     }
 
-    public JSON returnSEORecommendations(Website){
+    public JSON returnSEORecommendations(Website site){
 
     }
 }
