@@ -30,7 +30,7 @@ public class DatabaseManager {
      * @param website the website
      * @return the website
      */
-    public Website getWebsite(String url){
+    public ArrayList<Website> getWebsite(String query){
         return null;
     }
 
