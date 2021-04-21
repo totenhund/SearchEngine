@@ -14,7 +14,7 @@ public class DatabaseManager {
         return instance;
     }
 
-    public Website getWebsite(Website website){
+    public Website getWebsite(String url){
 
     }
     
