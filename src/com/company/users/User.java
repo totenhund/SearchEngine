@@ -4,10 +4,18 @@ import com.company.website.Website;
 
 import java.util.ArrayList;
 
+/**
+ * The type User.
+ */
 public class User {
     private Long id;
 
-    public void sendRequests(String query){
+    /**
+     * Send requests.
+     *
+     * @param query the query
+     */
+    public void sendRequests(String query) {
 
     }
 
