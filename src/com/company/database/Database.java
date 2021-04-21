@@ -1,4 +1,4 @@
-package refactoring_guru.singleton.example.non_thread_safe;
+package com.company.database;
 
 public final class Database {
     private static Database instance;
