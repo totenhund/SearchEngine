@@ -1,10 +1,24 @@
+package com.company.SearchEngine;
+import com.company.website.Website;
+
+import java.util.ArrayList;
+
+/**
+ * The type Search engine.
+ */
 public class SearchEngine{
 
-    private Website[] sendQuery(String processedQuery){
-
+    private ArrayList<Website> sendQuery(String processedQuery){
+        return null;
     }
 
-    public Website[] getWebsites(String query){
-
+    /**
+     * Get websites array list.
+     *
+     * @param query the query
+     * @return the array list
+     */
+    public ArrayList<Website> getWebsites(String query){
+        return null;
     }
 }
