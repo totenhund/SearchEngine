@@ -14,23 +14,23 @@ public class DatabaseManager {
         return instance;
     }
 
-    public Website getWebsite(){
+    public Website getWebsite(Website website){
 
     }
     
-    public void postWebsite(){
+    public void postWebsite(Website website){
 
     }
     
-    public void updateRating(){
+    public void updateRating(Website website, Int rating){
 
     }
     
-    public void putWebsite(){
+    public void putWebsite(Website website){
 
     }
     
-    public Website deleteWebsite(){
+    public Website deleteWebsite(Website website){
 
     }
 }
