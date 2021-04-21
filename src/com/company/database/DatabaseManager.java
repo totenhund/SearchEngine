@@ -3,16 +3,13 @@ package com.company.database;
 public class DatabaseManager {
 
     private static DatabaseManager instance;
-    public String value;
 
-    private DatabaseManager(String value) {
-        
-        this.value = value;
+    private DatabaseManager() {
     }
 
-    public static DatabaseManager getInstance(String value) {
+    public static DatabaseManager getInstance() {
         if (instance == null) {
-            instance = new DatabaseManager(value);
+            instance = new DatabaseManager();
         }
         return instance;
     }
