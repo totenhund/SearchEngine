@@ -1,4 +1,5 @@
 package com.company.evaluator;
 
-public class Evaluator {
+public interface  Evaluator {
+    public float getRating();
 }
