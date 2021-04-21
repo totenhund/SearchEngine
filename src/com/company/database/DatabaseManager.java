@@ -30,8 +30,8 @@ public class DatabaseManager {
      * @param website the website
      * @return the website
      */
-    public Website getWebsite(Website website){
-        return website;
+    public Website getWebsite(String url){
+        return null;
     }
 
     /**
@@ -72,3 +72,4 @@ public class DatabaseManager {
         return website;
     }
 }
+
