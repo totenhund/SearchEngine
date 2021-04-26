@@ -1,4 +1,4 @@
-package com.company.evaluator.criteries;
+package com.company.evaluator.decorators;
 
 import com.company.evaluator.Evaluator;
 import com.company.website.Website;

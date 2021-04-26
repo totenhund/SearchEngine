@@ -1,7 +1,7 @@
 package com.company.evaluatorFactory;
 
 import com.company.evaluator.Evaluator;
-import com.company.evaluator.criteries.TrustEvaluator;
+import com.company.evaluator.decorators.TrustEvaluator;
 
 /**
  * The type Trust evaluator factory.

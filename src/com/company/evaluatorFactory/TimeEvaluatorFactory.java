@@ -1,7 +1,7 @@
 package com.company.evaluatorFactory;
 
 import com.company.evaluator.Evaluator;
-import com.company.evaluator.criteries.TimeEvaluator;
+import com.company.evaluator.decorators.TimeEvaluator;
 
 /**
  * The type Time evaluator factory.

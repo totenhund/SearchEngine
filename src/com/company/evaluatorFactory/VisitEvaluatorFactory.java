@@ -1,8 +1,7 @@
 package com.company.evaluatorFactory;
 
-import com.company.evaluator.ConcreteEvaluator;
 import com.company.evaluator.Evaluator;
-import com.company.evaluator.criteries.VisitEvaluator;
+import com.company.evaluator.decorators.VisitEvaluator;
 
 /**
  * The type Visit evaluator factory.
