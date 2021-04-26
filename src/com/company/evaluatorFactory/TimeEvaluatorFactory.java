@@ -8,7 +8,7 @@ import com.company.evaluator.criteries.TimeEvaluator;
  */
 public class TimeEvaluatorFactory implements EvaluatorFactory {
     @Override
-    public Evaluator createEvaluator() {
-        return new TimeEvaluator();
+    public Evaluator createEvaluator(Evaluator evaluator) {
+        return new TimeEvaluator(evaluator);
     }
 }

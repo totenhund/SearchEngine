@@ -6,17 +6,21 @@ import com.company.website.Website;
 /**
  * The type Time evaluator.
  */
-public class TimeEvaluator implements Evaluator {
+public class TimeEvaluator extends VisitEvaluator {
 
     /**
      * Instantiates a new Time evaluator.
      */
-    public TimeEvaluator() {
-        System.out.println("Time evaluator is created");
+    public TimeEvaluator(Evaluator evaluator) {
+        super(evaluator);
     }
 
     @Override
     public float getRating(Website website) {
-        return 0;
+        return super.wrapper.getRating(website) + evaluateTime(website);
+    }
+
+    private float evaluateTime(Website website){
+        return 10f;
     }
 }

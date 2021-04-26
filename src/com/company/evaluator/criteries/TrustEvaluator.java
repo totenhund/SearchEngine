@@ -6,17 +6,21 @@ import com.company.website.Website;
 /**
  * The type Trust evaluator.
  */
-public class TrustEvaluator implements Evaluator {
+public class TrustEvaluator extends VisitEvaluator {
 
     /**
      * Instantiates a new Trust evaluator.
      */
-    public TrustEvaluator() {
-        System.out.println("Trust evaluator is created");
+    public TrustEvaluator(Evaluator evaluator) {
+        super(evaluator);
     }
 
     @Override
     public float getRating(Website website) {
-        return 0;
+        return super.wrapper.getRating(website) + evaluateTrust(website);
+    }
+
+    private float evaluateTrust(Website website){
+        return 4f;
     }
 }

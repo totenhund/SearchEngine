@@ -11,5 +11,5 @@ interface EvaluatorFactory {
      *
      * @return the evaluator
      */
-    public Evaluator createEvaluator();
+    public Evaluator createEvaluator(Evaluator evaluator);
 }

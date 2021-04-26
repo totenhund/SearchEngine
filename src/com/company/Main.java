@@ -1,9 +1,13 @@
 package com.company;
 
+import com.company.evaluator.ConcreteEvaluator;
 import com.company.evaluator.Evaluator;
 import com.company.evaluatorFactory.TimeEvaluatorFactory;
 import com.company.evaluatorFactory.TrustEvaluatorFactory;
 import com.company.evaluatorFactory.VisitEvaluatorFactory;
+import com.company.website.Website;
+
+import java.util.ArrayList;
 
 public class Main {
 
@@ -14,9 +18,12 @@ public class Main {
         TrustEvaluatorFactory trustEvaluatorFactory = new TrustEvaluatorFactory();
 
         // evaluators
-        Evaluator evaluator1 = timeEvaluatorFactory.createEvaluator();
-        Evaluator evaluator2 = visitEvaluatorFactory.createEvaluator();
-        Evaluator evaluator3 = trustEvaluatorFactory.createEvaluator();
+        Evaluator concrete = new ConcreteEvaluator();
+        Evaluator visitEvaluator = visitEvaluatorFactory.createEvaluator(concrete);
+        Evaluator timeEvaluator = timeEvaluatorFactory.createEvaluator(visitEvaluator);
+        Evaluator trustEvaluator = trustEvaluatorFactory.createEvaluator(timeEvaluator);
+
+        System.out.println(trustEvaluator.getRating(new Website("", new ArrayList<String>(), new ArrayList<String>())));
 
 
     }

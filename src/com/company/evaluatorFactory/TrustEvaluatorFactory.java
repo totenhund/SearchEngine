@@ -8,7 +8,7 @@ import com.company.evaluator.criteries.TrustEvaluator;
  */
 public class TrustEvaluatorFactory implements EvaluatorFactory {
     @Override
-    public Evaluator createEvaluator() {
-        return new TrustEvaluator();
+    public Evaluator createEvaluator(Evaluator evaluator) {
+        return new TrustEvaluator(evaluator);
     }
 }

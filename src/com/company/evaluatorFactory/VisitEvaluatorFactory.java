@@ -10,7 +10,7 @@ import com.company.evaluator.criteries.VisitEvaluator;
 public class VisitEvaluatorFactory implements EvaluatorFactory {
 
     @Override
-    public Evaluator createEvaluator() {
-        return new VisitEvaluator(new ConcreteEvaluator());
+    public Evaluator createEvaluator(Evaluator evaluator) {
+        return new VisitEvaluator(evaluator);
     }
 }

@@ -15,11 +15,14 @@ public class VisitEvaluator implements Evaluator {
      */
     public VisitEvaluator(Evaluator source) {
         wrapper = source;
-        System.out.println("Visit evaluator is created");
     }
 
     @Override
     public float getRating(Website website) {
-        return 0;
+        return wrapper.getRating(website) + evaluateVisits(website);
+    }
+
+    private float evaluateVisits(Website website) {
+        return 3f;
     }
 }
