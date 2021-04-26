@@ -1,4 +1,4 @@
-package com.company.evaluator.criteries;
+package com.company.evaluator.decorators;
 
 import com.company.evaluator.Evaluator;
 import com.company.website.Website;
@@ -8,15 +8,21 @@ import com.company.website.Website;
  */
 public class VisitEvaluator implements Evaluator {
 
+    protected Evaluator wrapper;
+
     /**
      * Instantiates a new Visit evaluator.
      */
-    public VisitEvaluator() {
-        System.out.println("Visit evaluator is created");
+    public VisitEvaluator(Evaluator source) {
+        wrapper = source;
     }
 
     @Override
     public float getRating(Website website) {
-        return 0;
+        return wrapper.getRating(website) + evaluateVisits(website);
+    }
+
+    private float evaluateVisits(Website website) {
+        return 3f;
     }
 }
