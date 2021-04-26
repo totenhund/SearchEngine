@@ -8,10 +8,13 @@ import com.company.website.Website;
  */
 public class VisitEvaluator implements Evaluator {
 
+    protected Evaluator wrapper;
+
     /**
      * Instantiates a new Visit evaluator.
      */
-    public VisitEvaluator() {
+    public VisitEvaluator(Evaluator source) {
+        wrapper = source;
         System.out.println("Visit evaluator is created");
     }
 
