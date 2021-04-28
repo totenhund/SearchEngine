@@ -45,11 +45,12 @@ public class DatabaseManager {
         return instance;
     }
 
+
     /**
-     * Get website website.
+     * Get websites array list.
      *
-     * @param website the website
-     * @return the website
+     * @param query the query
+     * @return the array list
      */
     public ArrayList<Website> getWebsites(String query){
         ArrayList<String> description = new ArrayList<String>();
@@ -92,7 +93,6 @@ public class DatabaseManager {
      * @param website the website
      * @param rating  the rating
      */
-
     public void updateRating(Website website, int rating){
         String updateRatingQuery = website.toString() + String.valueOf(rating); 
         try{

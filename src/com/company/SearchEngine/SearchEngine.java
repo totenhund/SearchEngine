@@ -11,6 +11,20 @@ public class SearchEngine{
 
     private DatabaseManager database;
 
+    private volatile static SearchEngine searchEngine;
+    private SearchEngine(){}
+
+    public static SearchEngine getInstance(){
+        if(searchEngine != null){
+            synchronized (SearchEngine.class){
+                if(searchEngine != null){
+                    searchEngine = new SearchEngine();
+                }
+            }
+        }
+        return searchEngine;
+    }
+
     private ArrayList<Website> sendQuery(String processedQuery){
         return database.getWebsites(processedQuery);
     }

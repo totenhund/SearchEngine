@@ -1,5 +1,6 @@
 package com.company.users;
 
+import com.company.optimizer.SEOOptimizer;
 import com.company.website.Website;
 
 import java.util.ArrayList;
@@ -13,6 +14,7 @@ public class WebsiteOwner {
      * The Attached websites.
      */
     public ArrayList<Website> attachedWebsites;
+    private SEOOptimizer optimizer = SEOOptimizer.getSEOOptimizer();
     private String login;
     private Long passwordHash;
 
@@ -27,7 +29,7 @@ public class WebsiteOwner {
             return false;
         }
 
-        attachedWebsites.add(website);
+        optimizer.addWebsiteToDatabase(website);
 
         return true;
 

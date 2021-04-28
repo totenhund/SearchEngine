@@ -7,7 +7,22 @@ import com.company.website.Website;
  */
 public class SEOOptimizer {
     
-    private DatabaseManager database;
+    private DatabaseManager database = DatabaseManager.getInstance();
+
+    private volatile static SEOOptimizer optimizer;
+    private SEOOptimizer(){}
+
+    public static SEOOptimizer getSEOOptimizer(){
+        if(optimizer != null){
+            synchronized (SEOOptimizer.class){
+                if(optimizer != null){
+                    optimizer = new SEOOptimizer();
+                }
+            }
+        }
+        return optimizer;
+    }
+
     /**
      * Add website to database.
      *
