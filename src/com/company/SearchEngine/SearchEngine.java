@@ -1,5 +1,6 @@
 package com.company.SearchEngine;
 import com.company.website.Website;
+import com.company.database.DatabaseManager;
 
 import java.util.ArrayList;
 
@@ -8,8 +9,10 @@ import java.util.ArrayList;
  */
 public class SearchEngine{
 
+    private DatabaseManager database;
+
     private ArrayList<Website> sendQuery(String processedQuery){
-        return null;
+        return database.getWebsites(processedQuery);
     }
 
     /**
@@ -19,6 +22,6 @@ public class SearchEngine{
      * @return the array list
      */
     public ArrayList<Website> getWebsites(String query){
-        return null;
+        return sendQuery(query);
     }
 }

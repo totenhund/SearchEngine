@@ -24,7 +24,5 @@ public class Main {
         Evaluator trustEvaluator = trustEvaluatorFactory.createEvaluator(timeEvaluator);
 
         System.out.println(trustEvaluator.getRating(new Website("", new ArrayList<String>(), new ArrayList<String>())));
-
-
     }
 }
