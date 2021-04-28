@@ -12,6 +12,11 @@ public class SEOOptimizer {
     private volatile static SEOOptimizer optimizer;
     private SEOOptimizer(){}
 
+    /**
+     * Get seo optimizer seo optimizer.
+     *
+     * @return the seo optimizer
+     */
     public static SEOOptimizer getSEOOptimizer(){
         if(optimizer != null){
             synchronized (SEOOptimizer.class){
@@ -23,13 +28,12 @@ public class SEOOptimizer {
         return optimizer;
     }
 
+
     /**
      * Add website to database.
      *
      * @param site the site
      */
-
-    
     public void addWebsiteToDatabase(Website site){
         database.putWebsite(site);
     }
@@ -40,7 +44,6 @@ public class SEOOptimizer {
      * @param site the site
      * @return the string
      */
-
     public String returnSEOStatistics(Website site){
         return site.toString();
     }
