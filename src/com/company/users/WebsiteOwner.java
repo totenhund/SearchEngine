@@ -1,5 +1,9 @@
 package com.company.users;
 
+import com.company.accessHandler.AuthHandler;
+import com.company.accessHandler.WebsiteContentHandler;
+import com.company.accessHandler.requests.Request;
+import com.company.database.UserAuthenticationManager;
 import com.company.optimizer.SEOOptimizer;
 import com.company.website.Website;
 
@@ -14,26 +18,21 @@ public class WebsiteOwner {
      * The Attached websites.
      */
     public ArrayList<Website> attachedWebsites;
-    private SEOOptimizer optimizer = SEOOptimizer.getSEOOptimizer();
+    private String hashedPassword;
     private String login;
-    private Long passwordHash;
 
     /**
-     * Submit website boolean.
+     * Instantiates a new Website owner.
      *
-     * @param website the website
-     * @return the boolean
+     * @param login    the login
+     * @param password the password
      */
-    public boolean submitWebsite(Website website) {
-        if (website == null) {
-            return false;
-        }
-
-        optimizer.addWebsiteToDatabase(website);
-
-        return true;
-
+    public WebsiteOwner(String login, String password) {
+        this.login = login;
+        this.hashedPassword = password;
+        attachedWebsites = new ArrayList<Website>();
     }
+
 
     /**
      * Gets websites.
